@@ -1,0 +1,529 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+::selection {
+    background: rgba(21, 33, 207, 0.51);
+    color: white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.container {
+    max-width: 1321px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: block;
+    padding: 16px 48px 16px 48px;
+    background: #1521CF;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 1px 1px 51px 4px rgba(91,100,227,0.54);
+    transition: .5s all;
+}
+
+.btn:hover {
+    transition: .5s all;
+    box-shadow: 1px 1px 51px 12px rgba(91,100,227,0.54);
+    opacity: 0.8;
+}
+
+.btn:active {
+    opacity: 0.6;
+    transition: .5s all;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    gap: 33px;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #9C9C9C;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    transition: .2s;
+    color: #000;
+}
+
+.logo {
+    cursor: pointer;
+    user-select: none;
+}
+
+.logo span {
+    background: #000;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+.balance__container {
+    display: flex;
+    box-shadow: 2px 2px 34px 0 rgba(0,0,0,0.16);
+    margin-top: 50px;
+}
+
+.balance__container h1 {
+    color: #535353;
+}
+
+.balance__info {
+    background: #F7F7F7;
+    padding-top: 23px;
+    padding-left: 23px;
+    padding-right: 93px;
+    max-width: 648px;
+}
+
+.balance__info h1 {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.balance__statistic {
+    padding-top: 26px;
+}
+
+.balance__statistic h1 {
+    font-size: 27px;
+}
+
+.balance__statistic p {
+    font-size: 28px;
+    padding-top: 26px;
+    font-weight: 600;
+}
+
+.warning__container {
+    margin-top: 34px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px #C4C4C4 solid;
+    border-radius: 5px;
+}
+
+.warning__container p {
+    color: #D7D7D7;
+    font-size: 13px;
+    font-weight: 400;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.warning__container img {
+    height: 30px;
+    width: 30px;
+    padding-left: 9px;
+}
+
+.balance__buttons {
+    margin: 0 auto;
+    margin-top: 60px;
+    padding-bottom: 31px;
+    text-align: center;
+}
+
+.balance__image {
+    height: 749px;
+    width: 584px;
+    background-image: url("../images/povar.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+/* TRANSACTION HISTORY STYLE */
+
+
+
+.bank__history {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #F7F7F7;
+    box-shadow: 2px 2px 34px 0 rgba(0,0,0,0.16);
+    border-radius: 15px;
+}
+
+.bank__history h1 {
+    font-size: 38px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.bank__operation__card {
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.bank__operation__card__flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bank__operation__card:nth-child(even) {
+    background: #ebebeb;
+}
+
+#operationDate {
+    display: block;
+    text-align: center;
+}
+
+.bank__operation__card h1, p {
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+/*TRANSACTION FORM*/
+
+.transactionForm {
+    padding: 25px 0 25px 0;
+    box-shadow: 2px 2px 34px 0 rgba(0,0,0,0.16);
+    border-radius: 15px;
+    background: #F7F7F7;
+    position: absolute;
+    z-index: 1;
+    top: 11%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+#closeBtn {
+    display: block;
+    text-align: right;
+    padding-right: 30px;
+    font-size: 26px;
+    font-weight: 600;
+
+}
+
+#transferSum {
+    margin-top: 20px;
+}
+
+.transactionForm input {
+    display: block;
+    width: 65%;
+    padding: 15px 15px 15px 15px;
+    margin: 0 auto;
+    font-size: 28px;
+    border: 3px solid #ebebeb;
+    font-family: 'Ubuntu';
+    box-sizing: border-box;
+}
+
+.disabled {
+    display: none;
+}
+
+.transactionForm input:focus {
+    outline: #1521CF;
+    border: 3px solid #1521CF;
+    transition: 1s border;
+
+}
+
+.transactionForm .btn {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+/* TRANSACTION ANIMATED MESSAGE */
+
+@keyframes progressBar {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+.active {
+    display: block;
+}
+
+.message__container {
+    width: 392px;
+    height: 85px;
+    background: #F7F7F7;
+    box-shadow: 2px 2px 34px 0 rgba(0,0,0,0.16);
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+#sumToMessage {
+    padding-left: 20px;
+    font-weight: 400;
+}
+
+.progress__bar {
+    height: 10px;
+    position: relative;
+    bottom: 0;
+    background: #bbbbbb;
+    /*border-radius: 15px;*/
+    width: 100%;
+}
+
+.progress__bar__filled {
+    background: #1521CF;
+    border-radius: 15px;
+    width: 100%;
+    height: 10px;
+    position: relative;
+    animation: progressBar 3s linear 1;
+}
+
+/* ERROR ANIMATION */
+
+.message__container_error {
+    width: 392px;
+    height: 85px;
+    background: #F7F7F7;
+    box-shadow: 2px 2px 34px 0 rgba(0,0,0,0.16);
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.message__container_error .red {
+    background: #cf1556;
+}
+
+
+
+/* MEDIA */
+
+@media (max-width: 1325px) {
+    .container {
+        width: 980px;
+    }
+    
+    .balance__container {
+        display: block;
+        transition: 3s all;
+    }
+
+    .balance__statistic h2 {
+        font-size: 28px;
+    }
+
+    .balance__image {
+        display: none;
+    }
+
+    .balance__info {
+        max-width: 100%;
+        padding: 23px;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .container {
+        width: 880px;
+    }
+    .balance__statistic h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 925px) {
+    .container {
+        width: 785px;
+    }
+}
+
+@media (max-width: 785px) {
+    .container {
+        width: 600px;
+    }
+
+    .navbar, .login__btn, .logo {
+        display: none;
+    }
+
+    .balance__statistic h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 626px) {
+    .container {
+        width: 426px;
+    }
+
+    .balance__statistic h2 {
+        font-size: 16px;
+    }
+
+    .warning__container p {
+        font-size: 10px;
+    }
+
+    .bank__history h1, p {
+        font-size: 18px;
+    }
+
+    #operationDate {
+        font-size: 10px;
+    }
+
+    .transactionForm {
+        height: 310px;
+    }
+
+    .transactionForm input {
+        height: 45px;
+        width: 75%;
+        font-size: 18px;
+    }
+
+    .transactionForm input[type=submit] {
+        padding: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        width: 350px;
+    }
+
+    .balance__statistic {
+        padding-top: 0;
+    }
+
+    .balance__statistic h1 {
+        font-size: 22px;
+    }
+
+    .balance__statistic h2 {
+        font-size: 12px;
+    }
+
+    .message__container, .message__container_error {
+        width: 250px;
+        height: 65px;
+    }
+
+    .message__container h1, .message__container_error h1 {
+        font-size: 18px;
+    }
+
+    .bank__history h1, p{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .container {
+        width: 319px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 280px;
+    }
+
+    .balance__statistic h1 {
+        font-size: 18px;
+    }
+
+    .balance__statistic h2 {
+        font-size: 10px;
+    }
+
+    .balance__statistic p {
+        font-size: 18px;
+    }
+
+    .warning__container p {
+        font-size: 8px;
+    }
+
+    .balance__buttons {
+        margin-top: 20px;
+    }
+
+    .bank__history h1, p{
+        font-size: 12px;
+    }
+}

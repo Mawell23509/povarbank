@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./templates/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./templates/css/burger.css">
+    <link rel="stylesheet" href="./templates/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>PovarBank - Online Banking</title>
+</head>
+<body>
+    <header class="container">
+        <nav class="header">
+            <h1 class="logo"><span>Povar</span>Bank</h1>
+            <ul class="navbar">
+                <li><a href="">Home</a></li>
+                <li><a href="">Loans</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Pages</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+            <a href="#" class="btn login__btn">Log In</a>
+
+
+                <div id="nav-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="burger__navbar">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Loans</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Pages</a></li>
+                    <li><a href="">Log In</a></li>
+                </ul>
+
+        </nav>
+        
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="balance__container">
+                <div class="balance__info">
+                    <h1 style="color: #1521CF;">Account Balance</h1>
+                    <div class="balance__statistic">
+                        <h1>Total Balance Overview</h1>
+                        <h2><span id="customerName">TSVYK M</span></h2>
+                        <h2>PovarBank Debit | <span id="accountNumber">26795248</span> | <span id="sortCode">71-67-42</span></h2>
+                        <div class="warning__container">
+                            <img src="./templates/images/emoji-warning.svg" alt="">
+                            <p class="warning">Your Account may be Blocked as no activity has taken place 
+                                for a long time Plese Login to prevent this from Happening.</p>
+                        </div>
+                        <p class="money__balance">$<span id="moneyBalance">0.00</span></p>
+                    </div>
+                    <div class="balance__buttons">
+                        <a href="#transactForm" id="openTransferForm" class="btn">Transfer</a>
+<!--                        <a onclick="" href="#" class="btn">History</a>-->
+                    </div>
+                </div>
+                <div class="balance__image">
+
+                </div>
+            </div>
+
+            <div class="bank__history">
+                <h1>Transaction History</h1>
+
+                <div id="bank__operation__container" class="bank__operation__container"></div>
+            </div>
+
+            <form id="transactForm" class="transactionForm disabled container" action="">
+                <span class="close__btn" id="closeBtn">Close</span>
+                <h1 style="text-align: center;">Transfer to card</h1>
+                <input id="trasferTo" placeholder="xxxx xxxx xxxx xxxx" type="tel" inputmode="numeric" maxlength="19"  required autofocus>
+                <input id="transferSum" inputmode="numeric" type="number" required placeholder="Enter the sum">
+                <input type="submit" onclick="moneyTransfer()" class="btn" style="text-align: center;">
+            </form>
+
+            <div class="message__container disabled">
+                <h1>Transaction Done <span id="sumToMessage">-100</span></h1>
+                <div class="progress__bar">
+                    <div class="progress__bar__filled"></div>
+                </div>
+            </div>
+
+            <div class="message__container_error disabled">
+                <h1>Error! Invalid Data</h1>
+                <div class="progress__bar">
+                    <div class="progress__bar__filled red"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+    <footer class="footer__bg">
+        <section class="container">
+            <ul class="footer__bar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="mailto:mykhailotsvik23509@gmail.com">Mail Us</a></li>
+            </ul>
+        </section>
+    </footer>
+
+
+    <script src="./templates/js/app.js"></script>
+    <script src="./templates/js/transfer-money.js"></script>
+    <script src="./templates/js/burger-menu.js"></script>
+<!--    <script type="module" src="./templates/js/transfer-money.js"></script>-->
+</body>
+</html>

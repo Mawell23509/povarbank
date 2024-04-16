@@ -1,0 +1,25 @@
+.footer__bg {
+    background: #1521CF;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.footer__bar {
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+    align-items: flex-end;
+}
+
+.footer__bar li {
+    list-style: none;
+}
+
+.footer__bar a {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer__bar a:hover {
+    text-decoration: none;
+}
